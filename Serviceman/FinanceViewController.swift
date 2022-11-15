@@ -148,8 +148,10 @@ class FinanceViewController: UIViewController {
     
     private func setMonthPopUpButton() {
 //        let optionClosure = {(action: UIAction) in
-//            monthPopUpButton.title = title)
+//
+//            )
 //        }
+         
         
         monthPopUpButton.menu = UIMenu(children: [
             UIAction(title: "January",state: .on, handler: { action in }),
