@@ -181,7 +181,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="D5t-as-4tD" kind="relationship" relationship="viewControllers" id="ge5-iT-0Zm"/>
-                        <segue destination="raw-MG-lnF" kind="relationship" relationship="viewControllers" id="7eX-WT-9lF"/>
+                        <segue destination="3t8-tt-rEd" kind="relationship" relationship="viewControllers" id="7eX-WT-9lF"/>
                         <segue destination="usM-3O-fxr" kind="relationship" relationship="viewControllers" id="aix-X1-Q3V"/>
                         <segue destination="rN3-6h-Qys" kind="relationship" relationship="viewControllers" id="u68-HN-iSX"/>
                     </connections>
@@ -190,7 +190,7 @@
             </objects>
             <point key="canvasLocation" x="-1416" y="354"/>
         </scene>
-        <!--Finance-->
+        <!--Finance View Controller-->
         <scene sceneID="9Kk-a9-oSO">
             <objects>
                 <viewController id="raw-MG-lnF" customClass="FinanceViewController" customModule="Serviceman" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,11 +200,11 @@
                         <viewLayoutGuide key="safeArea" id="q9k-ff-8Bi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Finance" image="dollarsign.circle" catalog="system" id="m0i-Gg-Ev5"/>
+                    <navigationItem key="navigationItem" id="aK1-Ry-lw8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipy-to-Hfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="17"/>
+            <point key="canvasLocation" x="516" y="17"/>
         </scene>
         <!--Chats-->
         <scene sceneID="qTv-3n-iI9">
@@ -256,6 +256,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Tf-nW-7MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-301.44927536231887" y="-661.60714285714278"/>
+        </scene>
+        <!--Finance-->
+        <scene sceneID="jKj-v4-f9Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3t8-tt-rEd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Finance" image="dollarsign.circle" catalog="system" id="m0i-Gg-Ev5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dc0-KY-OtF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="raw-MG-lnF" kind="relationship" relationship="rootViewController" id="7hy-8s-JbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XO1-rm-C4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301.875" y="16.901408450704224"/>
         </scene>
     </scenes>
     <resources>

@@ -10,38 +10,68 @@ import SnapKit
 
 class FinanceViewController: UIViewController {
     
-    private lazy var view1: UIView = {
-        let view = UIView()
-        view.backgroundColor = .blue
-        return view
+    let items = ["Day", "Month", "Year"]
+    
+    private lazy var timePeriodSegmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl(items: items)
+        segmentedControl.selectedSegmentIndex = 1
+        segmentedControl.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
+        return segmentedControl
     }()
 
-    private lazy var view2: UIView = {
-        let view = UIView()
-        view.backgroundColor = .purple
-        return view
-    }()
 
-    private lazy var view3: UIView = {
-        let view = UIView()
-        view.backgroundColor = .green
-        return view
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
+        setupNavigationBar()
     }
     
     private func layout() {
-        view.addSubview(view1)
-        view1.snp.makeConstraints { make in
-            make.width.equalTo(100)
-            make.height.equalTo(100)
-            make.center.equalToSuperview()
+        view.addSubview(timePeriodSegmentedControl)
+        timePeriodSegmentedControl.snp.makeConstraints { make in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(30)
         }
     }
     
+    private func setupNavigationBar() {
+        title = "Financial Statistics"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chart.line.uptrend.xyaxis.circle"),
+            style: .plain,
+            target: self,
+            action: #selector(chartButtonPressed)
+        )
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    @objc private func chartButtonPressed() {
+        let chartVC = ChartViewController()
+        navigationController?.pushViewController(chartVC, animated: true)
+    }
+    
+    @objc private func segmentedControlChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            break
+        case 1:
+            break
+        default:
+            break
+        }
+    }
     
     
     
@@ -59,5 +89,6 @@ class FinanceViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

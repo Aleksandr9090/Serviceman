@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F76A1152922925E0052CB55 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F76A1142922925E0052CB55 /* SnapKit */; };
 		1F76A1192922A25A0052CB55 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76A1182922A25A0052CB55 /* FinanceViewController.swift */; };
+		1F7709E22922D20600FA491B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7709E12922D20600FA491B /* ChartViewController.swift */; };
 		1F782DF8291F8DCC00A4C104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F782DF7291F8DCC00A4C104 /* AppDelegate.swift */; };
 		1F782DFA291F8DCC00A4C104 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F782DF9291F8DCC00A4C104 /* SceneDelegate.swift */; };
 		1F782DFF291F8DCC00A4C104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F782DFD291F8DCC00A4C104 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1F76A1182922A25A0052CB55 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		1F7709E12922D20600FA491B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		1F782DF4291F8DCC00A4C104 /* Serviceman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Serviceman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F782DF7291F8DCC00A4C104 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F782DF9291F8DCC00A4C104 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				1F782E172921745800A4C104 /* TabBarViewController.swift */,
 				1F782E192922351900A4C104 /* AlertController.swift */,
 				1F76A1182922A25A0052CB55 /* FinanceViewController.swift */,
+				1F7709E12922D20600FA491B /* ChartViewController.swift */,
 			);
 			path = Serviceman;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F782E12291F9B6900A4C104 /* Order.swift in Sources */,
+				1F7709E22922D20600FA491B /* ChartViewController.swift in Sources */,
 				1F76A1192922A25A0052CB55 /* FinanceViewController.swift in Sources */,
 				1F782E162921558200A4C104 /* DataManager.swift in Sources */,
 				1F782DF8291F8DCC00A4C104 /* AppDelegate.swift in Sources */,
