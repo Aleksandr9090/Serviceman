@@ -152,7 +152,6 @@ class FinanceViewController: UIViewController {
 //            )
 //        }
          
-        
         monthPopUpButton.menu = UIMenu(children: [
             UIAction(title: "January",state: .on, handler: { action in }),
             UIAction(title: "February", handler: { action in }),
