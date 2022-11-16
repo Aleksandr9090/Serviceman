@@ -78,64 +78,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s1N-0T-hmk">
-                                <rect key="frame" x="16" y="99" width="288" height="412"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s1N-0T-hmk">
+                                <rect key="frame" x="16" y="99" width="288" height="412.5"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-m6-orM">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
-                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-Gb-wNe">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GPb-ES-RXw">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="43"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Is Complete" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-FY-l9B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI5-fD-iFt">
+                                                        <rect key="frame" x="11" y="30" width="27.5" height="13"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-m6-orM">
+                                                <rect key="frame" x="64" y="0.0" width="224" height="43"/>
+                                                <locale key="locale" localeIdentifier="en_RU"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-fY-9pI">
-                                        <rect key="frame" x="0.0" y="53.5" width="288" height="38"/>
+                                        <rect key="frame" x="0.0" y="53" width="288" height="42.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9H-7d-xxM">
-                                        <rect key="frame" x="0.0" y="106.5" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="105.5" width="288" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-6n-OYi">
-                                        <rect key="frame" x="0.0" y="160" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="158.5" width="288" height="42.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7A-hD-fOR">
-                                        <rect key="frame" x="0.0" y="213.5" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="211" width="288" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KkV-wL-8OW">
-                                        <rect key="frame" x="0.0" y="267" width="288" height="38"/>
+                                        <rect key="frame" x="0.0" y="264" width="288" height="42.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stuff" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E88-dh-xnT">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVl-Ph-jBB">
-                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="38"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-bn-LwY">
-                                        <rect key="frame" x="0.0" y="320" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="316.5" width="288" height="43"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bir-VD-BGw">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Share" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-uE-rZ8">
-                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="38.5"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" id="VHJ-ar-1Gg">
-                                        <rect key="frame" x="0.0" y="373.5" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="369.5" width="288" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -146,10 +166,10 @@
                         <viewLayoutGuide key="safeArea" id="yJD-NQ-726"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="s1N-0T-hmk" firstAttribute="leading" secondItem="yJD-NQ-726" secondAttribute="leading" constant="16" id="83a-5a-F8H"/>
-                            <constraint firstItem="yJD-NQ-726" firstAttribute="trailing" secondItem="s1N-0T-hmk" secondAttribute="trailing" constant="16" id="Caf-pu-36z"/>
-                            <constraint firstItem="yJD-NQ-726" firstAttribute="bottom" secondItem="s1N-0T-hmk" secondAttribute="bottom" constant="8" id="JT0-cf-l1b"/>
-                            <constraint firstItem="s1N-0T-hmk" firstAttribute="top" secondItem="yJD-NQ-726" secondAttribute="top" constant="8" id="Nth-jm-0eR"/>
+                            <constraint firstItem="s1N-0T-hmk" firstAttribute="top" secondItem="yJD-NQ-726" secondAttribute="top" constant="8" id="0Rr-jj-dfJ"/>
+                            <constraint firstItem="yJD-NQ-726" firstAttribute="trailing" secondItem="s1N-0T-hmk" secondAttribute="trailing" constant="16" id="FV6-ZJ-LIB"/>
+                            <constraint firstItem="yJD-NQ-726" firstAttribute="bottom" secondItem="s1N-0T-hmk" secondAttribute="bottom" constant="8" id="YQI-Mt-sUb"/>
+                            <constraint firstItem="s1N-0T-hmk" firstAttribute="leading" secondItem="yJD-NQ-726" secondAttribute="leading" constant="16" id="eGW-Lm-3sj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CFf-8D-lHG">

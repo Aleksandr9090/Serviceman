@@ -43,13 +43,13 @@ class OrdersViewController: UITableViewController {
             
         }
         
-        let doneAction = UIContextualAction(style: .normal, title: "Complete") { _, _, isDone in
+        let doneAction = UIContextualAction(style: .normal, title: "Done") { _, _, isDone in
             StorageManager.shared.done(order)
             tableView.reloadRows(at: [indexPath], with: .automatic)
             isDone(true)
         }
         
-        doneAction.backgroundColor = .green
+        doneAction.backgroundColor = #colorLiteral(red: 0, green: 0.7089391947, blue: 0.3792886138, alpha: 1)
         
         
         return UISwipeActionsConfiguration(actions: [doneAction, deleteAction])

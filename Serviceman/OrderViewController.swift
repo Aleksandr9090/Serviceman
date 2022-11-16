@@ -11,9 +11,10 @@ class OrderViewController: UIViewController {
     
     var order: Order!
     
+    @IBOutlet var datePicker: UIDatePicker!
+    
     @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
-    @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var taskTextField: UITextField!
     @IBOutlet var costTextField: UITextField!
     @IBOutlet var stuffTextField: UITextField!
