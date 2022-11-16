@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import RealmSwift
 
 class StorageManager {
     
     static let shared = StorageManager()
     
-    var orders = Order.sortedByDate(orders: Order.getOrders())
+    let realm = try! Realm()
+    
+//    var orders = Order.sortedByDate(orders: Order.getOrders())
     
 //    var ordersMap: [Int: Order] {
 //        getOrdersMap(orders: orders)
@@ -20,15 +23,17 @@ class StorageManager {
     private init() {}
     
     func save(_ orders: [Order]) {
-        
+        try! realm.write{
+            realm.add(orders)
+        }
     }
     
     func save(_ order: Order) {
-        orders.append(order)
+        
     }
     
     func delete(_ orderIndex: Int) {
-        orders.remove(at: orderIndex)
+        
     }
     
     func edit(_ order: Order) {

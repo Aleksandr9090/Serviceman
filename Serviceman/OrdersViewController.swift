@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OrdersViewController: UITableViewController {
-    var orders: [Order] = []
+    var orders: Results<Order>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        orders = StorageManager.shared.orders
-
+        
+        orders = StorageManager.shared.realm.objects(Order.self)
+        createTempData()
     }
 
     // MARK: - Table view data source
@@ -91,5 +93,11 @@ extension OrdersViewController {
         let rowIndex = IndexPath(row: orders.count - 1, section: 0)
         tableView.insertRows(at: [rowIndex], with: .automatic)
         tableView.reloadData()
+    }
+    
+    private func createTempData() {
+        DataManager.shared.createTempData {
+            self.tableView.reloadData()
+        }
     }
 }
