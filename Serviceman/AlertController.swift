@@ -20,6 +20,7 @@ extension UIAlertController {
                 phone: textFields?[0].text ?? "",
                 address: textFields?[1].text ?? "",
                 task: textFields?[2].text ?? "",
+                date: Date(),
                 stuff: textFields?[3].text ?? "",
                 stuffCost: Int(textFields?[4].text ?? "") ?? 0,
                 cost: Int(textFields?[5].text ?? "") ?? 0,

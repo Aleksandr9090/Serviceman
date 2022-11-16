@@ -143,13 +143,6 @@ class FinanceViewController: UIViewController {
             make.height.equalTo(30)
         }
         
-        
-        
-        
-        
-        
-        
-        
     }
     
     private func setMonthPopUpButton() {

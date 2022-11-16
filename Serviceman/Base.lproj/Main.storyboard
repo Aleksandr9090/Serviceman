@@ -74,7 +74,7 @@
         <scene sceneID="PmE-hf-pre">
             <objects>
                 <viewController id="tWz-xY-zNo" customClass="OrderViewController" customModule="Serviceman" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HIV-QV-y36">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="HIV-QV-y36">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -82,57 +82,62 @@
                                 <rect key="frame" x="16" y="99" width="288" height="412"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-fY-9pI">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9H-7d-xxM">
-                                        <rect key="frame" x="0.0" y="61" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="288" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-BY-Vyn">
+                                        <rect key="frame" x="0.0" y="106.5" width="288" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-6n-OYi">
-                                        <rect key="frame" x="0.0" y="122" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="160" width="288" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7A-hD-fOR">
-                                        <rect key="frame" x="0.0" y="183" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="213.5" width="288" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KkV-wL-8OW">
-                                        <rect key="frame" x="0.0" y="244" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="267" width="288" height="38"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stuff" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E88-dh-xnT">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVl-Ph-jBB">
-                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="46"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-bn-LwY">
-                                        <rect key="frame" x="0.0" y="305" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="320" width="288" height="38.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bir-VD-BGw">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="46"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Share" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-uE-rZ8">
-                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="46"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="136.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" id="VHJ-ar-1Gg">
-                                        <rect key="frame" x="0.0" y="366" width="288" height="46"/>
+                                        <rect key="frame" x="0.0" y="373.5" width="288" height="38.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -156,6 +161,7 @@
                         <outlet property="addressTextField" destination="V9H-7d-xxM" id="3FA-sF-lRb"/>
                         <outlet property="commentTextField" destination="VHJ-ar-1Gg" id="czM-ei-b9v"/>
                         <outlet property="costTextField" destination="F7A-hD-fOR" id="Ufv-HD-u14"/>
+                        <outlet property="dateTextField" destination="Ppw-BY-Vyn" id="hOV-im-naM"/>
                         <outlet property="ownerTextField" destination="bir-VD-BGw" id="mp7-GT-mNY"/>
                         <outlet property="percentOwnerTextField" destination="kHh-uE-rZ8" id="0CG-iY-0ik"/>
                         <outlet property="phoneTextField" destination="NCu-fY-9pI" id="bjB-ia-Y8H"/>

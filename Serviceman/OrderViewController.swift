@@ -13,6 +13,7 @@ class OrderViewController: UIViewController {
     
     @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
+    @IBOutlet var dateTextField: UITextField!
     @IBOutlet var taskTextField: UITextField!
     @IBOutlet var costTextField: UITextField!
     @IBOutlet var stuffTextField: UITextField!
@@ -31,6 +32,7 @@ class OrderViewController: UIViewController {
     private func setupTextFields() {
         phoneTextField.text = order.phone
         addressTextField.text = order.address
+        dateTextField.text = getDateString(from: order.date)
         taskTextField.text = order.task
         costTextField.text = String(order.cost)
         stuffTextField.text = order.stuff
@@ -38,6 +40,13 @@ class OrderViewController: UIViewController {
         ownerTextField.text = order.owner
         percentOwnerTextField.text = String(order.percentOwner)
         commentTextField.text = order.comment
+    }
+    
+    private func getDateString(from date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+
+        return dateFormatter.string(from: date)
     }
 
 }

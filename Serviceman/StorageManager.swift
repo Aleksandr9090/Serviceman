@@ -13,9 +13,9 @@ class StorageManager {
     
     var orders = Order.getOrders()
     
-    var ordersMap: [Int: Order] {
-        getOrdersMap(orders: orders)
-    }
+//    var ordersMap: [Int: Order] {
+//        getOrdersMap(orders: orders)
+//    }
     
     
     private init() {}
@@ -40,11 +40,13 @@ class StorageManager {
         
     }
     
-    private func getOrdersMap(orders: [Order]) -> [Int : Order] {
-        var ordersMap: [Int: Order] = [:]
-        for index in 0...orders.count {
-            ordersMap[index] = orders[index]
-        }
-        return ordersMap
-    }
+//    private func getOrdersMap(orders: [Order]) -> [Int : Order] {
+//        var ordersMap: [Int: Order] = [:]
+//        for index in 0...orders.count {
+//            ordersMap[index] = orders[index]
+//        }
+//        return ordersMap
+//    }
+    
+//    func getProfitForThePeriod(_ period: )
 }
