@@ -36,7 +36,7 @@ class Order {
         self.owner = owner
     }
 
-    static func getOrders() -> [Order] {
+     static func getOrders() -> [Order] {
         var orders: [Order] = []
         
         let phones = DataManager.shared.phones
@@ -63,6 +63,16 @@ class Order {
 
         return orders
     }
+    
+    
+    static func sortedByDate(orders: [Order]) -> [Order] {
+        var orders: [Order] = orders
+        
+        orders.sort{$0.date > $1.date}
+        
+        return orders
+    }
+    
     
 //    static func getOrdersMap(orders: [Order]) -> [Int : Order] {
 //        var ordersMap: [Int: Order] = [:]

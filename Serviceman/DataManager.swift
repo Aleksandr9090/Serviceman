@@ -55,7 +55,7 @@ class DataManager {
         "Артур", "Артур", "Саша", "Саша", "Саша",
         "Артем", "Артем", "Артем", "Артем", "Артем"
     ].shuffled()
-    
+        
     func getRandomDates() -> [Date] {
         let calendar = Calendar.current
         
@@ -73,8 +73,10 @@ class DataManager {
                                       ) ?? Date()
             )
         }
+        
+        
+        
         return dates
     }
-    
 }
 

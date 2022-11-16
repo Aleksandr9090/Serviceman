@@ -11,7 +11,7 @@ class StorageManager {
     
     static let shared = StorageManager()
     
-    var orders = Order.getOrders()
+    var orders = Order.sortedByDate(orders: Order.getOrders())
     
 //    var ordersMap: [Int: Order] {
 //        getOrdersMap(orders: orders)

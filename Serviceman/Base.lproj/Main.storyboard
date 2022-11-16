@@ -81,17 +81,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s1N-0T-hmk">
                                 <rect key="frame" x="16" y="99" width="288" height="412"/>
                                 <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-m6-orM">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="39"/>
+                                    </datePicker>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCu-fY-9pI">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="288" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9H-7d-xxM">
-                                        <rect key="frame" x="0.0" y="53.5" width="288" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-BY-Vyn">
                                         <rect key="frame" x="0.0" y="106.5" width="288" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -161,7 +159,7 @@
                         <outlet property="addressTextField" destination="V9H-7d-xxM" id="3FA-sF-lRb"/>
                         <outlet property="commentTextField" destination="VHJ-ar-1Gg" id="czM-ei-b9v"/>
                         <outlet property="costTextField" destination="F7A-hD-fOR" id="Ufv-HD-u14"/>
-                        <outlet property="dateTextField" destination="Ppw-BY-Vyn" id="hOV-im-naM"/>
+                        <outlet property="datePicker" destination="VnG-m6-orM" id="HYK-26-Q00"/>
                         <outlet property="ownerTextField" destination="bir-VD-BGw" id="mp7-GT-mNY"/>
                         <outlet property="percentOwnerTextField" destination="kHh-uE-rZ8" id="0CG-iY-0ik"/>
                         <outlet property="phoneTextField" destination="NCu-fY-9pI" id="bjB-ia-Y8H"/>

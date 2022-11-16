@@ -13,7 +13,7 @@ class OrderViewController: UIViewController {
     
     @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
-    @IBOutlet var dateTextField: UITextField!
+    @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var taskTextField: UITextField!
     @IBOutlet var costTextField: UITextField!
     @IBOutlet var stuffTextField: UITextField!
@@ -26,13 +26,17 @@ class OrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextFields()
+        
+        datePicker.addTarget(self, action: #selector(dateChange), for: UIControl.Event.valueChanged)
     }
     
-
+    @objc private func dateChange() {
+        
+    }
+    
     private func setupTextFields() {
         phoneTextField.text = order.phone
         addressTextField.text = order.address
-        dateTextField.text = getDateString(from: order.date)
         taskTextField.text = order.task
         costTextField.text = String(order.cost)
         stuffTextField.text = order.stuff
@@ -42,7 +46,7 @@ class OrderViewController: UIViewController {
         commentTextField.text = order.comment
     }
     
-    private func getDateString(from date: Date) -> String {
+    private func getFormatDate(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
 
