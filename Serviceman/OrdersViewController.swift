@@ -9,13 +9,25 @@ import UIKit
 import RealmSwift
 
 class OrdersViewController: UITableViewController {
+
     var orders: Results<Order>!
+    
+    private var currentOrders: Results<Order>!
+    private var doneOrders: Results<Order>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         orders = StorageManager.shared.realm.objects(Order.self)
         createTempData()
+        
+        doneOrders = orders.filter("isDone = false")
+        currentOrders = orders.filter("isDone = true")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -40,9 +52,8 @@ class OrdersViewController: UITableViewController {
         let order = orders[indexPath.row]
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
-            StorageManager.shared.delete(indexPath.row)
+            StorageManager.shared.delete(order)
             tableView.reloadRows(at: [indexPath], with: .automatic)
-            
         }
         
         let doneAction = UIContextualAction(style: .normal, title: "Done") { _, _, isDone in
@@ -67,7 +78,13 @@ class OrdersViewController: UITableViewController {
         orderVC.order = order
         
     }
-
+    @IBAction func filterOrders(_ sender: UISegmentedControl) {
+        orders = sender.selectedSegmentIndex == 0
+            ? orders.filter("iDone = false")
+            : orders.filter("iDone = true")
+        tableView.reloadData()
+    }
+    
 
     @IBAction func AddButtonPressed(_ sender: UIBarButtonItem) {
         showAlert()
@@ -76,6 +93,7 @@ class OrdersViewController: UITableViewController {
 }
 
 extension OrdersViewController {
+    
     private func showAlert(completion: (() -> Void)? = nil) {
 
         let alert = UIAlertController.createAlert(withTitle: "Add new order", andMessage: "Enter data in the fields")
@@ -90,7 +108,7 @@ extension OrdersViewController {
     private func saveOrder(_ order: Order) {
         let order = order
         StorageManager.shared.save(order)
-        let rowIndex = IndexPath(row: orders.count - 1, section: 0)
+        let rowIndex = IndexPath(row: orders.index(of: order) ?? 0, section: 0)
         tableView.insertRows(at: [rowIndex], with: .automatic)
         tableView.reloadData()
     }

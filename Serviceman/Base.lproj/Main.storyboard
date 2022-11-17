@@ -21,8 +21,11 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="CURRENT"/>
-                                <segment title="COMPLETED"/>
+                                <segment title="DONE"/>
                             </segments>
+                            <connections>
+                                <action selector="sortedOrders:" destination="dEa-k5-Pwz" eventType="valueChanged" id="nTI-nG-hfQ"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="oDA-SC-98G" detailTextLabel="1vp-XZ-dIR" style="IBUITableViewCellStyleSubtitle" id="Ct8-lv-CeQ">
@@ -173,13 +176,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CFf-8D-lHG">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Xgr-IV-ZoI"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Xgr-IV-ZoI">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="tWz-xY-zNo" id="IsW-2o-XfD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="V9H-7d-xxM" id="3FA-sF-lRb"/>
                         <outlet property="commentTextField" destination="VHJ-ar-1Gg" id="czM-ei-b9v"/>
                         <outlet property="costTextField" destination="F7A-hD-fOR" id="Ufv-HD-u14"/>
                         <outlet property="datePicker" destination="VnG-m6-orM" id="HYK-26-Q00"/>
+                        <outlet property="doneSwitch" destination="eRY-FY-l9B" id="1Bu-cT-RAT"/>
                         <outlet property="ownerTextField" destination="bir-VD-BGw" id="mp7-GT-mNY"/>
                         <outlet property="percentOwnerTextField" destination="kHh-uE-rZ8" id="0CG-iY-0ik"/>
                         <outlet property="phoneTextField" destination="NCu-fY-9pI" id="bjB-ia-Y8H"/>

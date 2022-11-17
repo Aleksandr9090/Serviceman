@@ -40,20 +40,10 @@ class Order: Object {
 
     static func sortedByDate(orders: [Order]) -> [Order] {
         var orders: [Order] = orders
-        
         orders.sort{$0.date > $1.date}
         
         return orders
     }
-    
-    
-//    static func getOrdersMap(orders: [Order]) -> [Int : Order] {
-//        var ordersMap: [Int: Order] = [:]
-//        for index in 0...orders.count {
-//            ordersMap[index] = orders[index]
-//        }
-//        return ordersMap
-//    }
     
 }
 

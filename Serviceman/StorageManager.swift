@@ -14,43 +14,72 @@ class StorageManager {
     
     let realm = try! Realm()
     
-//    var orders = Order.sortedByDate(orders: Order.getOrders())
-    
-//    var ordersMap: [Int: Order] {
-//        getOrdersMap(orders: orders)
-//    }
-    
     private init() {}
     
     func save(_ orders: [Order]) {
-        try! realm.write{
+        write {
             realm.add(orders)
         }
     }
     
     func save(_ order: Order) {
-        
+        write {
+            realm.add(order)
+        }
     }
     
-    func delete(_ orderIndex: Int) {
-        
+    func delete(_ order: Order) {
+        write {
+            realm.delete(order)
+        }
     }
     
-    func edit(_ order: Order) {
-        
+    func edit(
+        order: Order,
+        phone: String,
+        address: String,
+        task: String,
+        cost: Int,
+        stuff: String,
+        stuffCost: Int,
+        owner: String,
+        percentOwner: Double,
+        comment: String,
+        date: Date,
+        isDone: Bool
+    )
+    {
+        write {
+            order.phone = phone
+            order.address = address
+            order.task = task
+            order.cost = cost
+            order.stuff = stuff
+            order.stuffCost = stuffCost
+            order.owner = owner
+            order.percentOwner = percentOwner
+            order.comment = comment
+            order.date = date
+            order.isDone = isDone
+        }
     }
     
     func done(_ order: Order) {
-        
+        write {
+            order.isDone = true
+        }
     }
     
-//    private func getOrdersMap(orders: [Order]) -> [Int : Order] {
-//        var ordersMap: [Int: Order] = [:]
-//        for index in 0...orders.count {
-//            ordersMap[index] = orders[index]
-//        }
-//        return ordersMap
-//    }
+    private func write(completion: () -> Void) {
+        do {
+            try realm.write {
+                completion()
+            }
+        } catch {
+            print(error)
+        }
+    }
     
-//    func getProfitForThePeriod(_ period: )
 }
+
+

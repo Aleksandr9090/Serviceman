@@ -13,6 +13,8 @@ class OrderViewController: UIViewController {
     
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var doneSwitch: UISwitch!
+    
     @IBOutlet var phoneTextField: UITextField!
     @IBOutlet var addressTextField: UITextField!
     @IBOutlet var taskTextField: UITextField!
@@ -23,15 +25,35 @@ class OrderViewController: UIViewController {
     @IBOutlet var percentOwnerTextField: UITextField!
     @IBOutlet var commentTextField: UITextField!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        doneSwitch.isOn = order.isDone
+        
         setupTextFields()
         
+        datePicker.date = order.date
         datePicker.addTarget(self, action: #selector(dateChange), for: UIControl.Event.valueChanged)
     }
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        StorageManager.shared.edit(
+            order: order,
+            phone: phoneTextField.text ?? "",
+            address: addressTextField.text ?? "",
+            task: taskTextField.text ?? "",
+            cost: Int(costTextField.text ?? "") ?? 0,
+            stuff: stuffTextField.text ?? "",
+            stuffCost: Int(stuffTextField.text ?? "") ?? 0,
+            owner: ownerTextField.text ?? "",
+            percentOwner: Double(percentOwnerTextField.text ?? "") ?? 0.5,
+            comment: commentTextField.text ?? "",
+            date: datePicker.date,
+            isDone: doneSwitch.isOn
+        )
+        navigationController?.popViewController(animated: true)
+    }
     
-    @objc private func dateChange() {
+    @objc private func dateChange(datePicker: UIDatePicker) {
         
     }
     

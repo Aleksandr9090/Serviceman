@@ -91,8 +91,8 @@ class DataManager {
         for _ in 0..<20 {
             dates.append(calendar.date(from: DateComponents(
                 calendar: calendar,
-                year: Int.random(in: 2021...2022),
-                month: Int.random(in: 1...12),
+                year: 2022,
+                month: Int.random(in: 10...12),
                 day: Int.random(in: 1...28),
                 hour: Int.random(in: 0...23),
                 minute: Int.random(in: 0...59)
